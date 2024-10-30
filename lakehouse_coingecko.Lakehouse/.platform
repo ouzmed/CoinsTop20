@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Lakehouse",
+    "displayName": "lakehouse_coingecko"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d639640f-d116-498b-914d-c931dbd5138a"
+  }
+}
