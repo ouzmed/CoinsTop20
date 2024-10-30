@@ -1,0 +1,60 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "29e95af3-d035-4b9d-bfd7-127c8d03e34e",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "myKey": {
+              "value": {
+                "value": "@pipeline().parameters.myKey",
+                "type": "Expression"
+              },
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Ingestion data from API",
+        "dependsOn": []
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "60066449-493c-4422-9761-049f755dfd08",
+          "workspaceId": "00000000-0000-0000-0000-000000000000"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Notebook1",
+        "dependsOn": [
+          {
+            "activity": "Ingestion data from API",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ],
+    "parameters": {
+      "myKey": {
+        "type": "string",
+        "defaultValue": "CG-q3ZM2PYEFp69sMb2vw3TvMsZ"
+      }
+    }
+  }
+}
