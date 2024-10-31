@@ -72,7 +72,7 @@ def get_data(url, headers=None):
 # the information about the api:
 
 currency ="usd"
-#myKey ="CG-q3ZM2PYEFp69sMb2vw3TvMsZ"
+#myKey ="xxxxx"
 url = f"https://api.coingecko.com/api/v3/coins/markets?vs_currency={currency}"
 
 headers = {
