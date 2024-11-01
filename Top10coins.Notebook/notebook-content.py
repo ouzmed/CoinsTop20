@@ -67,32 +67,35 @@ df.printSchema()
 
 # CELL ********************
 
+df_cleaned = df.withColumn("last_updated", col("last_updated").cast("date"))\
+               .withColumn("ath_date", col("ath_date").cast("date"))\
+               .withColumn("atl_date", col("atl_date").cast("date"))\
+               .drop("image","id")
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
+
+df_cleaned.write.format("delta").mode("overwrite").saveAsTable("lakehouse_coingecko.top100_coins")
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
+
 # filter only the 10 coins with the useful information
 
-df20 = df.filter(col("market_cap_rank") <= 20 ).select("symbol","name","current_price","ath","atl","last_updated")\
-        .withColumn("last_updated", col("last_updated").cast("date"))
-
-# METADATA ********************
-
-# META {
-# META   "language": "python",
-# META   "language_group": "synapse_pyspark"
-# META }
-
-# CELL ********************
-
-display(df20)
-
-# METADATA ********************
-
-# META {
-# META   "language": "python",
-# META   "language_group": "synapse_pyspark"
-# META }
-
-# CELL ********************
-
-df20.write.format("delta").mode("overwrite").saveAsTable("lakehouse_coingecko.top20")
+#df20 = df.filter(col("market_cap_rank") <= 20 ).select("symbol","name","current_price","ath","atl","last_updated")\
+#        .withColumn("last_updated", col("last_updated").cast("date"))
 
 # METADATA ********************
 

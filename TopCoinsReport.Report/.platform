@@ -1,12 +1,11 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
   "metadata": {
-    "type": "Notebook",
-    "displayName": "Coins100_refined",
-    "description": "New notebook"
+    "type": "Report",
+    "displayName": "TopCoinsReport"
   },
   "config": {
     "version": "2.0",
-    "logicalId": "60066449-493c-4422-9761-049f755dfd08"
+    "logicalId": "7b6009e9-e05b-4d2c-8222-950fe493e468"
   }
 }

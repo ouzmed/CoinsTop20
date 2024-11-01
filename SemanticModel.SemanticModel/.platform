@@ -1,11 +1,11 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
   "metadata": {
-    "type": "Report",
-    "displayName": "top20coins"
+    "type": "SemanticModel",
+    "displayName": "SemanticModel"
   },
   "config": {
     "version": "2.0",
-    "logicalId": "9e28d8c3-490b-4436-be1e-08eb6f7fa61a"
+    "logicalId": "b155ee9c-05d3-498b-bd97-8a6723238294"
   }
 }
