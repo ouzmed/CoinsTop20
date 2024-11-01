@@ -1,0 +1,446 @@
+{
+  "compatibilityLevel": 1604,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.138.7469.2 (Main)"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"DatabaseQuery\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"WebModelingEdit\"]"
+      }
+    ],
+    "collation": "Latin1_General_100_BIN2_UTF8",
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "DatabaseQuery",
+        "annotations": [
+          {
+            "name": "PBI_IncludeFutureArtifacts",
+            "value": "False"
+          }
+        ],
+        "expression": [
+          "let",
+          "    database = Sql.Database(\"CJTWCXSZU36EVJXWYLROLTNG3Q-Z6NH6RJ5Y7MEFE25JNSQZSLGWU.datawarehouse.fabric.microsoft.com\", \"922d5a8a-ea92-4bb7-8d1f-708121809e23\")",
+          "in",
+          "    database"
+        ],
+        "kind": "m",
+        "lineageTag": "5e513d1e-dce8-4b83-ad04-aae9b3ea97bb"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "top100_coins",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "symbol",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "96e8da99-4f60-4761-8af9-6c3f1150431e",
+            "sourceColumn": "symbol",
+            "sourceLineageTag": "symbol",
+            "sourceProviderType": "varchar(8000)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "78988be5-bd31-4745-8f0c-30f4e48d1deb",
+            "sourceColumn": "name",
+            "sourceLineageTag": "name",
+            "sourceProviderType": "varchar(8000)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "current_price",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1c0bfbf0-55e7-47ab-a660-8d1e1988749d",
+            "sourceColumn": "current_price",
+            "sourceLineageTag": "current_price",
+            "sourceProviderType": "varchar(8000)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "market_cap",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "cce39dd7-eeac-44c4-ac9e-c9e3a35bffad",
+            "sourceColumn": "market_cap",
+            "sourceLineageTag": "market_cap",
+            "sourceProviderType": "bigint",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "market_cap_rank",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "6eee1761-238b-43db-8a37-eafc2a03edb2",
+            "sourceColumn": "market_cap_rank",
+            "sourceLineageTag": "market_cap_rank",
+            "sourceProviderType": "int",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "fully_diluted_valuation",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "6169872c-e7f0-446a-9d0b-7734b903f771",
+            "sourceColumn": "fully_diluted_valuation",
+            "sourceLineageTag": "fully_diluted_valuation",
+            "sourceProviderType": "bigint",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "total_volume",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "91577c12-c486-48d3-a715-0cf550b8fec1",
+            "sourceColumn": "total_volume",
+            "sourceLineageTag": "total_volume",
+            "sourceProviderType": "bigint",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "high_24h",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b3c72156-4a8d-4fde-98f6-4a89258a4316",
+            "sourceColumn": "high_24h",
+            "sourceLineageTag": "high_24h",
+            "sourceProviderType": "varchar(8000)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "low_24h",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e5403bf8-e13d-4586-a8f4-7b55fca85a1d",
+            "sourceColumn": "low_24h",
+            "sourceLineageTag": "low_24h",
+            "sourceProviderType": "varchar(8000)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "price_change_24h",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "b629cb20-f265-40d0-a350-fec2d0a75a42",
+            "sourceColumn": "price_change_24h",
+            "sourceLineageTag": "price_change_24h",
+            "sourceProviderType": "real",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "price_change_percentage_24h",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "326ad51c-ff26-4013-983c-8e6002d34750",
+            "sourceColumn": "price_change_percentage_24h",
+            "sourceLineageTag": "price_change_percentage_24h",
+            "sourceProviderType": "real",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "market_cap_change_24h",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ed127b23-5f60-4edc-9c24-5f81e7fa40b8",
+            "sourceColumn": "market_cap_change_24h",
+            "sourceLineageTag": "market_cap_change_24h",
+            "sourceProviderType": "varchar(8000)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "market_cap_change_percentage_24h",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "c00258d9-7feb-48e4-ae3f-187aa33707de",
+            "sourceColumn": "market_cap_change_percentage_24h",
+            "sourceLineageTag": "market_cap_change_percentage_24h",
+            "sourceProviderType": "real",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "circulating_supply",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "57812507-ab7b-40d3-a62f-157244a9d6fc",
+            "sourceColumn": "circulating_supply",
+            "sourceLineageTag": "circulating_supply",
+            "sourceProviderType": "real",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "total_supply",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "859aea14-2204-47ef-84d8-e5663e790fee",
+            "sourceColumn": "total_supply",
+            "sourceLineageTag": "total_supply",
+            "sourceProviderType": "real",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "max_supply",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "96e8260d-f5ad-4bfe-abfe-f65aa153a90b",
+            "sourceColumn": "max_supply",
+            "sourceLineageTag": "max_supply",
+            "sourceProviderType": "real",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "ath",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c48292a0-445f-45a7-9d53-682b7d20d7b5",
+            "sourceColumn": "ath",
+            "sourceLineageTag": "ath",
+            "sourceProviderType": "varchar(8000)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ath_date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "a3bf0024-9fc7-4d7e-abec-cf131a84b90a",
+            "sourceColumn": "ath_date",
+            "sourceLineageTag": "ath_date",
+            "sourceProviderType": "date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "atl",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "55de8d0e-ebcf-48a6-afdf-6328e53bac47",
+            "sourceColumn": "atl",
+            "sourceLineageTag": "atl",
+            "sourceProviderType": "varchar(8000)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "atl_date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "601c243b-7ca9-4d72-99e3-2feed3d6e9ad",
+            "sourceColumn": "atl_date",
+            "sourceLineageTag": "atl_date",
+            "sourceProviderType": "date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "last_updated",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "85c9570a-8a11-4a2d-b7a3-656ba28b39e2",
+            "sourceColumn": "last_updated",
+            "sourceLineageTag": "last_updated",
+            "sourceProviderType": "date",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "8d3cb621-21ab-4a64-9dbd-bf17e1ce04fc",
+        "measures": [
+          {
+            "name": "Top10",
+            "changedProperties": [
+              {
+                "property": "Name"
+              }
+            ],
+            "lineageTag": "bfc1cf61-fad9-40f7-94d2-08b2db567ccb"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "top100_coins",
+            "mode": "directLake",
+            "source": {
+              "entityName": "top100_coins",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo",
+              "type": "entity"
+            }
+          }
+        ],
+        "sourceLineageTag": "[dbo].[top100_coins]"
+      }
+    ]
+  }
+}

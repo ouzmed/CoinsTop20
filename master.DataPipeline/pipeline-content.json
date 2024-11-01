@@ -39,7 +39,7 @@
           "secureInput": false,
           "secureOutput": false
         },
-        "name": "Notebook1",
+        "name": "Top100coins",
         "dependsOn": [
           {
             "activity": "Ingestion data from API",
