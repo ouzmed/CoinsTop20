@@ -53,3 +53,23 @@ AS SELECT * FROM vw_coins
 -- META   "language": "sparksql",
 -- META   "language_group": "synapse_pyspark"
 -- META }
+
+-- CELL ********************
+
+-- window function example:
+
+with cte as (
+select *, row_number() over( order by current_price asc) as rn
+from coinc_less_1dollar
+)
+
+SELECT *
+from cte
+where rn <=10 and rn >=2
+
+-- METADATA ********************
+
+-- META {
+-- META   "language": "sparksql",
+-- META   "language_group": "synapse_pyspark"
+-- META }
