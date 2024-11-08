@@ -8,7 +8,7 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.138.7469.2 (Main)"
+        "value": "2.138.7476.2 (Main)"
       },
       {
         "name": "PBI_QueryOrder",
@@ -55,6 +55,24 @@
         ],
         "kind": "m",
         "lineageTag": "5e513d1e-dce8-4b83-ad04-aae9b3ea97bb"
+      }
+    ],
+    "roles": [
+      {
+        "name": "top4",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "d17d6ccece9d4edc8206b7d385ff21a8"
+          }
+        ],
+        "modelPermission": "read",
+        "tablePermissions": [
+          {
+            "name": "top100_coins",
+            "filterExpression": "[market_cap_rank] < 4"
+          }
+        ]
       }
     ],
     "sourceQueryCulture": "en-US",

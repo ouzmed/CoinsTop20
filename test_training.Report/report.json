@@ -1,0 +1,69 @@
+{
+  "config": "{\"version\":\"5.37\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY22SU09\",\"version\":\"5.39\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY22SU09",
+            "path": "BaseThemes/CY22SU09.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0d68f081a7bcec277f8e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.605521030503024,\"y\":0,\"z\":0,\"width\":574.9590445401096,\"height\":391.08192767048024}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"top100_coins.symbol\"},{\"queryRef\":\"top100_coins.name\"},{\"queryRef\":\"top100_coins.current_price\"},{\"queryRef\":\"top100_coins.ath\"},{\"queryRef\":\"top100_coins.atl\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"top100_coins\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"symbol\"},\"Name\":\"top100_coins.symbol\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"name\"},\"Name\":\"top100_coins.name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"current_price\"},\"Name\":\"top100_coins.current_price\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"ath\"},\"Name\":\"top100_coins.ath\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"atl\"},\"Name\":\"top100_coins.atl\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 391.08,
+          "width": 574.96,
+          "x": 9.61,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"58e1bafc77a0cc44ba7a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":705.3196870969364,\"y\":285.421196334947,\"z\":3,\"width\":504.9759627464447,\"height\":319.7266285867435}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Category\":[{\"queryRef\":\"top100_coins.name\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(top100_coins.market_cap)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"top100_coins\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"name\"},\"Name\":\"top100_coins.name\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"market_cap\"}},\"Function\":0},\"Name\":\"Sum(top100_coins.market_cap)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"market_cap\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 319.73,
+          "width": 504.98,
+          "x": 705.32,
+          "y": 285.42,
+          "z": 3.00
+        },
+        {
+          "config": "{\"name\":\"b8d91a7a8079f217af26\",\"layouts\":[{\"id\":0,\"position\":{\"x\":59.00534347309001,\"y\":426.75957721234863,\"z\":2,\"width\":537.9091777081693,\"height\":264.8379369838691}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(top100_coins.symbol)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"top100_coins\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"symbol\"}},\"Function\":2},\"Name\":\"Min(top100_coins.symbol)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"symbol\"}},\"Function\":2}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 264.84,
+          "width": 537.91,
+          "x": 59.01,
+          "y": 426.76,
+          "z": 2.00
+        },
+        {
+          "config": "{\"name\":\"cb2478c9b7b12f92d9d9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":705.3196870969364,\"y\":0,\"z\":1,\"width\":504.9759627464447,\"height\":98.79964488517396}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"top100_coins.symbol\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"top100_coins\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"symbol\"},\"Name\":\"top100_coins.symbol\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}},\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"selection\":[{\"properties\":{\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 98.80,
+          "width": 504.98,
+          "x": 705.32,
+          "y": 0.00,
+          "z": 1.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
